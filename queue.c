@@ -36,8 +36,8 @@ int queue_de(sp_queue *q, datatype *e) {
 	if(queue_empty(*q)) {
 		return false;
 	}
-	q->rear -= 1;
-	*e = q->sp_queue_array[q->rear];
+	q->front += 1;
+	*e = q->sp_queue_array[q->front];
 	return true;	
 }
 
